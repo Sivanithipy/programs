@@ -2,8 +2,10 @@ public class secondlarele {
     public static void main(String[] args) {
      int[] arr1={4,6,5,3,2,1};
      int[] arr2={3,5,5};
+     int[] arr3={5,5,5};   
      System.out.println(findSecondLargestElement(arr1));
-     System.out.println(findSecondLargestElement(arr2));
+     
+  
     }
         private static int findSecondLargestElement(int[] arr)
         { 
@@ -20,6 +22,10 @@ public class secondlarele {
             else if(secmax<num && num!=max)
             {
                secmax=num;
+            }
+            if(secmax==Integer.MIN_VALUE)
+            {
+                return max;
             }
         }
         return secmax;
