@@ -1,0 +1,29 @@
+public class firstnonrep {
+    public static void main(String[] args) {
+        String str="abcdabd";
+        String str2="%%@@##";
+        System.out.println(findnonrepeatingCharacter(str1));
+        System.out.println(findnonrepeatingCharacter(str2));
+    }
+    private static Character findnonrepeatingCharacter(String str)
+    {
+        int n=str.length();
+        if(n<=1) 
+        {
+            return null;
+        }
+        int[] count=new int[256];
+        for(int i=0;i<n;i++)
+        {
+            count[str.charAt(i)]++;
+        }
+        for(int i=0;i<n;i++)
+        {
+            if(count[str.charAt(i)]==1)
+            {
+                return str.charAt(i);
+            }
+        }
+        return null;
+    }
+}
