@@ -1,0 +1,20 @@
+public class missingno {
+    public static void main(String[] args) {
+        int[] arr1={3,1,0};
+        int[] arr2={};
+        int[] arr3={1,2};
+        System.out.println(findMissingNumber(arr1));
+        System.out.println(findMissingNumber(arr2));
+        System.out.println(findMissingNumber(arr3));
+    }
+    private static int findMissingNumber(int[] arr)
+    {
+        int n=arr.length;
+        int tot=n*(n+1)/2;
+        for(int num:arr)
+        {
+            tot-=num;
+        }
+        return tot;
+    }
+}
