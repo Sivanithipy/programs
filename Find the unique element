@@ -1,0 +1,15 @@
+public class FindUniqueElement {
+    public static void main(String[] args) {
+        int[] arr={4,2,5,4,2};
+        System.out.println(FindUniqueEle(arr));
+    }
+    private static int FindUniqueEle(int[] arr)
+    {
+        int result=0;
+        for(int num:arr)
+        {
+           result^=num;
+        }
+        return result;
+    }
+}
