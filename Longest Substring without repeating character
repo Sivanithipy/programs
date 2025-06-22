@@ -1,0 +1,27 @@
+public class longestsubstringwithoutrepeating {
+    public static void main(String[] args) {
+        String str1="ababcdc";
+        String str2="AaaBb";
+        String str3="pwwekk";
+        System.out.println(longestsubstring(str1));
+        System.out.println(longestsubstring(str2));
+        System.out.println(longestsubstring(str3));
+    }
+    private static int longestsubstring(String str)
+    {
+        int start=0;
+        int maxLen=0;
+        int[] lastSeen=new int[256];
+        for(int i=0;i<str.length();i++)
+        {
+            char currentChar=str.charAt(i);
+            if(lastSeen[currentChar]>start)
+            {
+                start=lastSeen[currentChar];
+            }
+            lastSeen[currentChar]=i+1;
+            maxLen=Math.max(maxLen,i+1-start);
+        }
+        return maxLen;
+    }
+}
