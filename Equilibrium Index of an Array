@@ -1,0 +1,25 @@
+public class EquilibriumIndex {
+    public static void main(String[] args) {
+        int[] array={1,5,8,2,3,1};
+        System.out.println(findEquilibriumElement(array));
+    }
+    private static int findEquilibriumElement(int[] array)
+    {
+        int totsum=0;
+        int left=0;
+        for(int num:array)
+        {
+            totsum=totsum+num;
+        }
+        for(int i=0;i<array.length;i++)
+        {
+            totsum-=array[i];
+            if(totsum==left)
+            {
+                return i;
+            }
+            left+=array[i];
+        }
+        return -1;
+    }
+}
