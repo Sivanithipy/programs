@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class NthPrimeNumbers {
+    
+    public static void PrimeNum(int num)
+    {
+        boolean[] isPrime=new boolean[num+1];
+        Arrays.fill(isPrime,true);
+        isPrime[0]=isPrime[1]=false;
+        for(int i=2;i*i<=num;i++)
+        {
+            if(isPrime[i])
+            {
+               for(int j=i*i;j<=num;j+=i)
+               {
+                isPrime[j]=false;
+               }
+            }
+        }
+        for(int i=2;i<=num;i++)
+        {
+            if(isPrime[i])
+            {
+                System.out.println(i);
+            }
+        }
+    }
+    public static void main(String[] args) {
+        
+        PrimeNum(50);
+    }
+}
