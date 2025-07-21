@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class LinearSearch {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 1, 6, 7, 8, 9, 10};
+        int target = 5;
+        List<Integer> res = find(arr, target, 0, new ArrayList<>());
+        System.out.println("Linear Search");
+        System.out.println("Target: " + target);
+        arrayPrint(res);
+    }
+
+    static List<Integer> find(int[] arr, int target, int index, List<Integer> ad) {
+        if (index >= arr.length) {
+            return ad;
+        }
+        if (arr[index] == target) {
+            ad.add(index);
+        }
+        return find(arr, target, index + 1, ad);
+    }
+
+    static void arrayPrint(List<Integer> arr) {
+        arr.forEach(a -> {
+            System.out.print(a + " ");
+        });
+    }
+}
