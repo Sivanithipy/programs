@@ -1,0 +1,20 @@
+public class Triangle2 {
+    public static void main(String[] args) {
+        int row=10;
+        int col = 0;
+        triangle(row, col);
+    }
+    static void triangle(int row,int col)
+    {
+        if(row==0) return;
+        if(col<row)
+        {
+            triangle(row, col+1);
+            System.out.print("* ");
+        }
+        else{
+            triangle(row-1, 0);
+            System.out.println("");
+        }
+    }
+}
