@@ -1,0 +1,34 @@
+public class compressString {
+    public static void main(String[] args)
+    {
+        String a = "aaabbcc";
+        System.out.println(Compress(a));
+    }
+    public static String Compress(String s)
+    {
+        StringBuilder sb = new StringBuilder();
+        
+        int n = s.length();
+       
+        for(int i = 0;i<n;i++)
+        {
+            char ch = s.charAt(i);
+            int count = 1;
+            for(int j = i+1;j<n;j++)
+            {
+                if(ch == s.charAt(j))
+                {
+                    count++;
+                    i++;
+                    
+                }
+                else{
+                    break;
+                }
+
+            }
+            sb.append(ch).append(count);
+        }
+        return sb.toString();
+    }
+}
