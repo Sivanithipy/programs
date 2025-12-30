@@ -1,0 +1,24 @@
+public class Palindrome {
+    public static void main(String[] args) {
+        String a = "madam";
+        String b = "levl";
+        System.out.println(palin(a));
+        System.out.println(palin(b));
+    }
+    private static Boolean palin(String n)
+    {
+        int left = 0;
+        int right = n.length()-1;
+
+        while(left < right)
+        {
+            if(n.charAt(left)!=n.charAt(right))
+            {
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+}
