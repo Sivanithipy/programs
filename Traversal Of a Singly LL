@@ -1,0 +1,28 @@
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+public class TraversalofSingLL {
+    public static void main(String[] args) {
+        Node head = new Node(10);
+        Node sec = new Node(20);
+        Node thi = new Node(30);
+        
+        head.next = sec;
+        sec.next = thi;
+
+        Node temp = head;
+        while(temp!=null)
+        {
+            System.out.print(temp.data+ " ");
+            temp = temp.next;
+        }
+
+    }
+}
