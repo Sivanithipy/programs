@@ -1,0 +1,17 @@
+import java.util.Stack;
+public class revusingStack {
+    public static void main(String[] args) {
+        String s = "hello";
+        Stack<Character> stack = new Stack<>();
+        for(char c : s.toCharArray())
+        {
+            stack.push(c);
+        }
+        String r = "";
+        while(!stack.isEmpty())
+        {
+            r+=stack.pop();
+        }
+        System.out.println(r);
+    }
+}
