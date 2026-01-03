@@ -1,0 +1,17 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class insertintoqueue {
+    public static void main(String[] args) {
+
+        Queue<Integer> q = new LinkedList<>();
+
+        q.add(23);
+        q.add(21);
+        q.add(47);
+
+        System.out.println(q.peek());
+        System.out.println(q.poll());
+        System.out.println(q);
+    }
+}
