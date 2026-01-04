@@ -1,0 +1,14 @@
+public class oppsign {
+    public static void main(String[] args) {
+        int a = -1;
+        int b = 3;
+        if((a ^ b) < 0 )
+        {
+            System.out.println("Opp sign");
+        }
+        else
+        {
+            System.out.println("Same sign");
+        }
+    }
+}
