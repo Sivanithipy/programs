@@ -1,0 +1,12 @@
+public class BitManipulation {
+    public static void main(String[] args) {
+        int[] arr = {2,3,5,2,3};
+        int result = 0;
+
+        for(int num : arr)
+        {
+            result = result ^ num;
+        }
+        System.out.println(result);
+    }
+}
