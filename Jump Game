@@ -1,0 +1,37 @@
+// User function Template for Java
+
+class Solution {
+    // Function to check if we can reach the last index from the 0th index.
+    public boolean canReach(int[] arr) {
+        // code here
+        int n = arr.length;
+        if(n <= 1)
+        return true;
+        if(arr[0] == 0)
+        {
+            return false;
+        }
+        int max = arr[0];
+        int steps = arr[0];
+        int jumps = 1;
+        for(int i = 1; i < n ; i++)
+        {
+            if(i == n-1)
+            
+                return true;
+            
+            max = Math.max(max, i + arr[i]);
+            steps--;
+            if(steps == 0)
+            {
+                jumps++;
+                if(i >= max)
+                {
+                    return false;
+                }
+                steps = max-i;
+            }
+        }
+        return false;
+    }
+}
