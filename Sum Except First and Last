@@ -1,0 +1,16 @@
+class Solution {
+    int sumExceptFirstLast(int[] arr) {
+        // your code here
+        int n = arr.length;
+        int sum = 0;
+        if(n <= 1)
+        {
+            return 0;
+        }
+        for(int i = 0; i < n-1 ; i++)
+        {
+            sum = arr[i]+sum;
+        }
+        return sum-arr[0];
+    }
+}
